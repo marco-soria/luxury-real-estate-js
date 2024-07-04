@@ -36,8 +36,8 @@ importers:
         specifier: ^10.0.5
         version: 10.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       swiper:
-        specifier: ^11.1.4
-        version: 11.1.4
+        specifier: ^8.3.2
+        version: 8.4.7
       uuid:
         specifier: ^10.0.0
         version: 10.0.0
@@ -933,6 +933,9 @@ packages:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
 
+  dom7@4.0.6:
+    resolution: {integrity: sha512-emjdpPLhpNubapLFdjNL9tP06Sr+GZkrIHEXLWvOGsytACUrkbeIdjO5g77m00BrHTznnlcNqgmn7pCN192TBA==}
+
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
@@ -1745,6 +1748,9 @@ packages:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
 
+  ssr-window@4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==}
+
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -1793,8 +1799,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  swiper@11.1.4:
-    resolution: {integrity: sha512-1n7kbYJB2dFEpUHRFszq7gys/ofIBrMNibwTiMvPHwneKND/t9kImnHt6CfGPScMHgI+dWMbGTycCKGMoOO1KA==}
+  swiper@8.4.7:
+    resolution: {integrity: sha512-VwO/KU3i9IV2Sf+W2NqyzwWob4yX9Qdedq6vBtS0rFqJ6Fa5iLUJwxQkuD4I38w0WDJwmFl8ojkdcRFPHWD+2g==}
     engines: {node: '>= 4.7.0'}
 
   tailwindcss@3.4.4:
@@ -2846,6 +2852,10 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
+  dom7@4.0.6:
+    dependencies:
+      ssr-window: 4.0.2
+
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.4.816: {}
@@ -3816,6 +3826,8 @@ snapshots:
 
   source-map-js@1.2.0: {}
 
+  ssr-window@4.0.2: {}
+
   string-width@4.2.3:
     dependencies:
       emoji-regex: 8.0.0
@@ -3888,7 +3900,10 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  swiper@11.1.4: {}
+  swiper@8.4.7:
+    dependencies:
+      dom7: 4.0.6
+      ssr-window: 4.0.2
 
   tailwindcss@3.4.4:
     dependencies:

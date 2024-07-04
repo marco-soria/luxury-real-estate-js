@@ -5,12 +5,12 @@ import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { db } from "../firebase";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  EffectFade,
-  Autoplay,
-  Navigation,
-  Pagination,
-} from "swiper";
+// import SwiperCore, {
+//   EffectFade,
+//   Autoplay,
+//   Navigation,
+//   Pagination,
+// } from "swiper";
 import "swiper/css/bundle";
 import {
   FaShare,
@@ -31,7 +31,7 @@ export default function Listing() {
   const [loading, setLoading] = useState(true);
   const [shareLinkCopied, setShareLinkCopied] = useState(false);
   const [contactLandlord, setContactLandlord] = useState(false);
-  SwiperCore.use([Autoplay, Navigation, Pagination]);
+  //SwiperCore.use([Autoplay, Navigation, Pagination]);
   useEffect(() => {
     async function fetchListing() {
       const docRef = doc(db, "listings", params.listingId);
