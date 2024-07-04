@@ -29,6 +29,7 @@ export default function SignIn() {
         password
       );
       if (userCredential.user) {
+        toast.success("Sign in was successful");
         navigate("/");
       }
     } catch (error) {
